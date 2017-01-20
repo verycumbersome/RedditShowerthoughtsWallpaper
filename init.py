@@ -17,10 +17,10 @@ class Earthporn_ShowerThoughts:
 
 #    def run_program(self):
         while(True):
-            Earthporn_Pic, Showerthought = utils.GetTopSubmissions(self.text_subreddit, self.image_subreddit,self.top_limit)
+            RedditPic, RedditText = utils.GetTopSubmissions(self.text_subreddit, self.image_subreddit,self.top_limit)
 
             with open('/Users/matthewjordan/git/Earthporn_ShowerThoughts/html/Template.html', 'r') as f: template = f.read()
-            with open('/Library/WebServer/Documents/index.html', 'w') as f: f.write(template.decode("utf8").format(Earthporn_Pic, Showerthought))
-            print Earthporn_Pic, Showerthought
+            with open('/Library/WebServer/Documents/index.html', 'w') as f: f.write(template.decode("utf8").format(RedditPic, RedditText))
+            print RedditPic, RedditText
 
             time.sleep(self.refresh_rate)
