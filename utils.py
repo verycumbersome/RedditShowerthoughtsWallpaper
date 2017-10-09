@@ -16,9 +16,6 @@ except:
 
 r = praw.Reddit(user_agent="JustDudeStuff_V1",client_secret="joK9SvU32QYtxZHz_dN_ecn4Bo8",client_id="BWVD4XaKSFT8Hg")
 
-# def login():
-#     r.login("justbotstuff", "Matthewunited1")
-
 def GetTopSubmissions(text_subreddit, image_subreddit, l):
     SubredditPic = r.subreddit(image_subreddit)
     SubredditText = r.subreddit(text_subreddit)
